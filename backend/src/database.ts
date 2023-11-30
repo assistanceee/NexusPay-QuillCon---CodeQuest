@@ -19,7 +19,7 @@
 
 import mongoose from 'mongoose';
 
-const MONGO_URL = "mongodb+srv://agatenashons:nashtech9021@afpay.cnz3ecn.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URL = "mongodb+srv://griffinesonyango:Qd5jDBg1f5AI5TNo@cluster0.njwyc5e.mongodb.net/";
 
 export async function connect() {
   try {

@@ -36,7 +36,7 @@ const bundler: IBundler = new Bundler({
 })
 const paymaster: IPaymaster = new BiconomyPaymaster({
   paymasterUrl:
-      "https://paymaster.biconomy.io/api/v1/80001/HaTCCk72C.3dec203b-4396-4337-b40a-8ac1ab0cb0ea",
+      "https://paymaster.biconomy.io/api/v1/80001/YE0JlpJVz.54e99dbc-2c0c-457f-8b6d-d88ef95d6175.YE0JlpJVz.54e99dbc-2c0c-457f-8b6d-d88ef95d6175",
 });
 const provider = new providers.JsonRpcProvider("https://rpc.ankr.com/polygon_mumbai")
 
@@ -287,46 +287,6 @@ app.get('/usdc-balance/:address', async (req, res) => {
     }
 });
 
-// app.get('/usdc-balance/:address', async (req, res) => {
-  // const tenMinutes = 10 * 60 * 1000; // 10 minutes in milliseconds
-  // const now = Date.now();
-  
-  // // If the data is cached and it was fetched less than 10 minutes ago, return the cached data
-  // if (cache.data && (now - cache.lastFetch < tenMinutes)) {
-  //   const conversionRate = cache.data.rate
-  //   // return res.json(cache.data);
-  // }
-
-  // If the data is not in cache or it's stale (10 minutes have passed), fetch new data
-//   try {
-//     const address = req.params.address;
-//     const usdcContract = new ethers.Contract(USDC_ADDRESS, usdcAbi, provider);
-
-//     const balanceRaw = await usdcContract.balanceOf(address);
-//     const decimals = await usdcContract.decimals();
-//     const balanceInUSDC = balanceRaw.div(ethers.BigNumber.from(10).pow(decimals)).toNumber();
-
-//     const conversionRate = await fetchUSDCToKESPrice();
-//     const balanceInKES = balanceInUSDC * conversionRate;
-//     console.log(balanceInKES);
-
-//     // Update cache
-//     cache.lastFetch = now;
-//     cache.data = {
-//       balanceInUSDC: balanceInUSDC,
-//       balanceInKES: balanceInKES.toFixed(2),
-//       rate: conversionRate
-//     };
-
-//     res.json(cache.data);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send('Failed to fetch balance.');
-//   }
-// });
-
-
-
 connect().then(() => {
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
@@ -446,14 +406,6 @@ try {
   }
 }
 
-// sendToken("0xEE49EA567f79e280E4F1602eb8e6479d1Fb9c8C8", "0xd5Bdd07DADF85F908660C543D7d43A37f2Ab1EF7", 10)
-//   .catch(error => console.error("Error calling sendToken:", error));
-
-// Global error handler for unhandled promise rejections
-// process.on('unhandledRejection', (reason, promise) => {
-//   console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-// });
-
 
 interface TokenTransferEvent {
     blockNumber: string;
@@ -543,27 +495,6 @@ async function getUSDCToKESRate() {
     return null;
   }
 }
-
-
-
-
-
-// getUSDCToKESRate().then(rate => {
-//   if (rate) {
-//     console.log(`1 USDC is approximately ${rate.toFixed(2)} KES`);
-//   } else {
-//     console.log('Failed to get the conversion rate.');
-//   }
-// });
-
-// Example usage:
-// const walletAddress = '0xe1F4615Afec6801493FB889eDe3A70812c842d05';
-// const apiKey = '6IEU61WYVQZJ9WT2U2UYZ3TVT2V7YG7QDF';
-
-// getAllTokenTransferEvents(walletAddress, apiKey).then(events => {
-//   console.log("start")
-//     console.log(events);
-// });
 
 
 async function main(){
