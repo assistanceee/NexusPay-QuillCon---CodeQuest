@@ -20,8 +20,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
   
     try {
         console.log("registering...")
-      // const response = await fetch('https://afpaybackend-bokyjcxb7-nashons.vercel.app/register', {
-        const response = await fetch('http://localhost:8000/register', {
+        const response = await fetch('https://nexus-pay-quill-con-code-quest-97b9.vercel.app/register', {
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

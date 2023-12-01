@@ -12,7 +12,7 @@ function Auth() {
     const handleSubmit = async () => {
         const endpoint = isLogin ? '/login' : '/register';
         try {
-            const response = await axios.post(`http://localhost:8000${endpoint}`, {
+            const response = await axios.post(`https://nexus-pay-quill-con-code-quest-97b9.vercel.app${endpoint}`, {
                 phoneNumber,
                 password,
             });

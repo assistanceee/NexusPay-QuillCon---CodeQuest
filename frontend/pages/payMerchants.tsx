@@ -58,7 +58,7 @@ const PayMerchants = () => {
 
         try {
 
-            const response = await fetch('https://nexus-pay-quill-con-code-quest-dg9i.vercel.app/pay', {
+            const response = await fetch('https://nexus-pay-quill-con-code-quest-97b9.vercel.app/pay', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ const PayMerchants = () => {
         try {
             setLoading(true); // set loading to true before the transaction
 
-            const response = await fetch('https://afpaybackend-pbj0jv1ei-nashons.vercel.app/pay', {
+            const response = await fetch('https://nexus-pay-quill-con-code-quest-97b9.vercel.app/pay', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

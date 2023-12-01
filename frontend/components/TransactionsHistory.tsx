@@ -26,7 +26,7 @@ const TransactionsHistory: React.FC = () => {
           throw new Error("Wallet address not available");
         }
 
-        const response = await fetch(`https://afpaybackend-pbj0jv1ei-nashons.vercel.app/token-transfer-events?address=${user.walletAddress}`);
+        const response = await fetch(`https://nexus-pay-quill-con-code-quest-97b9.vercel.app/token-transfer-events?address=${user.walletAddress}`);
         const data = await response.json();
         // console.log(data)
         setTransactions(data);
